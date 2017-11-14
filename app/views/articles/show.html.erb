@@ -1,0 +1,18 @@
+
+<div class="content"> 
+	<h2 id="header"> <%= @article.title %></h2>
+	<p><%= @article.body.html_safe %> </p>
+	<p class="article-time">
+	<%= @article.created_at.strftime("%B %d %Y, %l:%M%P") %></p>
+	<p id='tags'>
+
+	<% @article.pins.each do |pin| %>
+	<div class="tags">
+		Pins: <%= link_to pin.name, pin_path(pin) %>
+	</div>
+	<% end %>
+	</p>
+	<%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Do you want to delete this Post?"}, id: 'article-show-link' %>
+	<%= link_to "Edit", edit_article_path(@article), id: 'article-show-link' %><br>
+	<%= link_to "Back", articles_path %>
+</div>

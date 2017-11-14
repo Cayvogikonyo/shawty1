@@ -1,0 +1,11 @@
+<h1>Pins</h1>
+ <ul>
+ 	<% @pins.each do |pin| %>
+ 	<li id="tags">
+ 		<div class="tags">
+ 			<%= link_to pin.name, pin_path(pin) %>
+ 		</div>
+ 		
+ 	</li>
+ 	<% end %>
+ </ul>

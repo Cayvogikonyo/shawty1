@@ -1,0 +1,24 @@
+<%= form_for (@article), html: {multipart: true} do |f| %>
+
+	<ul>
+	<% @article.errors.full_messages.each do |error| %>
+		<li><%= error %></li>
+	<% end %>
+	</ul>
+	<p>
+		<%= f.label :title %> <br/>
+		<%= f.text_field :title %>
+	</p>
+	<p>
+		<%= f.label :body %><br />
+		<%= f.cktext_area :body %>
+	</p>
+	<p>
+		<%= f.label :pin_list %> <br>
+		<%= f.text_field :pin_list %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+
+<% end %>

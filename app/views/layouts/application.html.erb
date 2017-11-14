@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shawty</title>
+    <%= csrf_meta_tags %>
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+  </head>
+
+  <body>
+	    <div class="avatar">
+        <div id="avatar">
+          <%= image_tag"shawty.jpg", id: "avatar-image" %>
+        </div>
+        <div class="diary"> My Diary </div>
+      </div>
+  	<div class="container">
+    	<%= yield %>
+	</div>
+  <div class="footer">
+  	<footer id="footer"> 2017 </footer>
+  </div>
+  </body>
+</html>
