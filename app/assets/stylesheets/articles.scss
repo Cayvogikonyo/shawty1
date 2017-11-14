@@ -49,7 +49,9 @@ ul#articles{
   font-family: 'MyWebFont';
   src: url('myfont.woff2') format('woff2');
 }
-
+h1#post{
+  text-align: center;
+}
 .head-link a{
 	color: midnightblue;
 	font-size: 26px;
@@ -101,6 +103,10 @@ ul#articles{
   color: #fff;
   text-align: center;
 	height: 25px;
+}
+
+.new{
+  margin-bottom: 6px;
 }
 
 a.new_article{
