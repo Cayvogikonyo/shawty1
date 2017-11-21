@@ -13,7 +13,7 @@
   <body>
 	    <div class="avatar">
         <div id="avatar">
-          <%= image_tag"shawty.jpg", id: "avatar-image" %>
+          <a href="/articles/new"> <%= image_tag"shawty.jpg", id: "avatar-image" %></a>
         </div>
         <div class="diary"> My Diary </div>
       </div>
@@ -21,7 +21,12 @@
     	<%= yield %>
 	</div>
   <div class="footer">
-  	<footer id="footer"> 2017 </footer>
+  	<footer id="footer"> 
+      &copy; 2017
+      <% if logged_in? %>
+        <div id ="logout"><%= link_to "logout", logout_path %></div> 
+      <%end %>
+    </footer>
   </div>
   </body>
 </html>

@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 include ArticlesHelper
-	
+before_action :require_login	
 	def index
 		@articles = Article.all.order(created_at: :desc)
 	end
